@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/***********    task 1   **********/
+.header {
+  background-color: #f2f2f2;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    background-color: #0303d5;
+  }
+}
+
+/***********    task 2   **********/
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 100vh;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+img {
+  width: 400px;
+  height: 600px;
+}
+
+@media only screen and (max-width: 800px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img {
+    width: 300px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  img {
+    width: 400px;
+    height: 500px;
+  }
+}
+
+/***********    task 3   **********/
+
+.nav {
+  padding: 7px;
+}
+
+.nav_list {
+  background-color: #000;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  min-height: 3rem;
+}
+
+ul li {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_list {
+    background-color: #808080;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+}
+
+/***********    task 4   **********/
+.grid_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.box {
+  height: 200px;
+  width: 485px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: #fff;
+}
+.box:nth-child(1) {
+  background-color: #fe0000;
+}
+.box:nth-child(2) {
+  background-color: #008001;
+}
+.box:nth-child(3) {
+  background-color: #0000fe;
+}
+.box:nth-child(4) {
+  background-color: #d3691f;
+}
+
+@media screen and (max-width: 768px) {
+  .grid_box {
+    grid-template-columns: 1fr;
+  }
+  .box {
+    height: 150px;
+    width: 450px;
+  }
+}
+
+/*****************    task 5   *************/
+
+.flex_box {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.horizontal_box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+}
+.box1 {
+  color: #fff;
+  padding: 20px;
+}
+.box1:nth-child(1) {
+  background-color: #000;
+}
+.horizontal_box .box1:nth-child(1) {
+  background-color: #66cc9a;
+  height: 50%;
+}
+.horizontal_box .box1:nth-child(2) {
+  background-color: #ff9934;
+  height: 50%;
+}
+.box1:nth-child(3) {
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .flex_box {
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+  }
+  .horizontal_box {
+    flex: 0;
+  }
+  .box1:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
